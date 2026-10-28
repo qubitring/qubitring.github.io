@@ -43,13 +43,15 @@
     .legal-links a:hover { color:white; text-decoration:underline; }
     :focus-visible { outline:3px solid #d19b77; outline-offset:4px; }
     @media (max-width:760px) {
-      .wrap { width:min(100% - 36px,1120px); }
+      .wrap { width:min(100% - 36px,1120px); min-width:0; }
       .nav { min-height:70px; }
       .brand-name { display:none; }
       .menu-toggle { display:block; }
       .nav-links { display:none; position:absolute; z-index:2; top:70px; left:0; right:0; padding:18px; background:var(--wine-dark); flex-direction:column; align-items:stretch; gap:0; }
       .nav-links.open { display:flex; }
       .nav-links a { padding:12px 8px; }
+      .privacy-content { min-width:0; }
+      .privacy-content p { overflow-wrap:anywhere; }
       .footer-bottom { flex-direction:column; }
     }
     @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
