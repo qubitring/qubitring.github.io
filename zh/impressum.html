@@ -26,7 +26,7 @@
     .site-header { background: var(--wine); color: white; }
     .nav { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 30px; }
     .brand { display: inline-flex; align-items: center; gap: 12px; color: white; text-decoration: none; }
-    .brand-mark { display: grid; place-items: center; flex: 0 0 43px; width: 43px; height: 43px; border: 1px solid #c9aaa1; border-radius: 9px; font: 900 25px var(--serif); }
+    .brand-mark { display: block; flex: 0 0 43px; width: 43px; height: 43px; border-radius: 9px; object-fit: cover; }
     .brand-name { font-size: 13px; letter-spacing: .12em; font-weight: 700; text-transform: uppercase; }
     .nav-links { display: flex; align-items: center; gap: clamp(20px, 3vw, 42px); }
     .nav-links a { color: #f2e9e5; font-size: 14px; text-decoration: none; }
@@ -64,7 +64,7 @@
 <body>
   <header class="site-header">
     <nav class="nav wrap" aria-label="主导航">
-      <a class="brand" href="/zh/" aria-label="Qubitring – 首页"><span class="brand-mark" aria-hidden="true">Q</span><span class="brand-name">Qubitring · Engineering Office</span></a>
+      <a class="brand" href="/zh/" aria-label="Qubitring – 首页"><img class="brand-mark" src="/assets/qubitring-logo.jpg" alt=""><span class="brand-name">Qubitring · Engineering Office</span></a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">菜单</button>
       <div class="nav-links" id="nav-links">
         <a href="/zh/#leistungen">服务</a><a href="/zh/#referenzen">关于我们</a><a href="/zh/#kontakt">联系</a><a href="/zh/#kontakt">预约咨询</a>
