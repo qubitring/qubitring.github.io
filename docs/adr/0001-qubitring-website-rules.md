@@ -46,6 +46,8 @@ historical page or deployment currently conforms.
   image dimensions must not force a wider grid or page.
 - Allow long translated headings and text to wrap on small screens.
 - Keep cards and navigation usable at both desktop and mobile sizes.
+- Place the hero artwork above the hero text on both desktop and mobile, in
+  both visual and document order.
 - Preserve the supplied logo artwork and use image formats and file extensions
   that match the actual encoded files.
 
