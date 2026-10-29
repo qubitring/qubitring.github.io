@@ -37,6 +37,12 @@ historical page or deployment currently conforms.
   selected language. Do not send a visitor to a missing localized route.
 - When adding or changing homepage content, update all four language versions
   in the same change.
+- Maintain a localized founder biography at `/about.html`, `/de/about.html`,
+  `/fil/about.html`, and `/zh/about.html`, linked from each homepage's
+  navigation.
+- Base founder biography and career details on the supplied LinkedIn profile;
+  include a link to the original profile and avoid inventing credentials or
+  achievements.
 
 ### 3. Responsive layout and media
 

@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="fil">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kilalanin si Martin Kunze, tagapagtatag ng Qubitring at business engineer na may mahigit 25 taong karanasan sa internasyonal na pagbabago at paghahatid ng mga proyekto.">
+  <title>Martin Kunze – Tagapagtatag | Qubitring</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --wine:#5e1a1a; --wine-dark:#431111; --paper:#f5efe7; --card:#eee7de; --ink:#171513; --muted:#655d55; --line:#d7cec3; --serif:"Merriweather",Georgia,serif; --sans:"Source Sans 3",Arial,sans-serif; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:var(--paper); font-family:var(--sans); }
+    a { color:inherit; }
+    .wrap { width:min(1120px,calc(100% - 48px)); margin-inline:auto; }
+    .site-header { background:var(--wine); color:white; }
+    .nav { min-height:82px; display:flex; align-items:center; justify-content:space-between; gap:30px; }
+    .brand { display:inline-flex; align-items:center; gap:12px; color:white; text-decoration:none; }
+    .brand-mark { display:block; flex:0 0 43px; width:43px; height:43px; border-radius:9px; object-fit:cover; }
+    .brand-name { font-size:13px; letter-spacing:.12em; font-weight:700; text-transform:uppercase; }
+    .nav-links { display:flex; align-items:center; gap:clamp(16px,2.4vw,34px); }
+    .nav-links a { color:#f2e9e5; font-size:14px; text-decoration:none; }
+    .nav-links a:hover { color:white; text-decoration:underline; text-underline-offset:5px; }
+    .menu-toggle { display:none; padding:8px 11px; border:1px solid #ffffff70; border-radius:4px; background:transparent; color:white; font:inherit; }
+    .language-switch { flex:0 0 auto; }
+    .language-switch select { max-width:130px; padding:8px 10px; border:1px solid #ffffff70; border-radius:4px; background:var(--wine-dark); color:white; font:600 13px var(--sans); }
+    main { padding-block:clamp(54px,8vw,96px); }
+    .eyebrow { margin:0 0 16px; color:var(--wine); font-size:14px; font-weight:700; }
+    h1,h2,h3 { font-family:var(--serif); }
+    h1 { max-width:900px; margin:0 0 20px; font-size:clamp(38px,5.4vw,64px); line-height:1.13; letter-spacing:-.04em; }
+    .intro { max-width:860px; margin:0 0 46px; color:var(--muted); font-size:20px; line-height:1.7; }
+    .stats { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:54px; }
+    .stat,.card { border:1px solid var(--line); border-radius:8px; background:var(--card); }
+    .stat { padding:22px; }
+    .stat strong { display:block; color:var(--wine); font:900 clamp(28px,3vw,38px) var(--serif); }
+    .stat span { display:block; margin-top:8px; color:var(--muted); line-height:1.45; }
+    .section-heading { margin:0 0 24px; font-size:clamp(26px,3.2vw,36px); }
+    .profile-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+    .card { padding:28px; }
+    .card h3 { margin:0 0 8px; font-size:21px; line-height:1.35; }
+    .card .role-meta { margin:0 0 16px; color:var(--wine); font-weight:700; }
+    .card p,.card li { color:var(--muted); line-height:1.7; }
+    .card p { margin:0; }
+    .card ul { margin:12px 0 0; padding-left:20px; }
+    .organizations { margin-top:18px; }
+    .organizations p { font-size:17px; }
+    .contact { margin-top:52px; padding:36px; border-radius:8px; background:var(--wine); color:white; }
+    .contact h2 { margin:0 0 12px; font-size:clamp(26px,3.4vw,38px); }
+    .contact p { color:#f2e9e5; line-height:1.65; }
+    .contact-links { display:flex; flex-wrap:wrap; gap:12px 24px; margin-top:22px; }
+    .contact-links a { color:white; font-weight:700; text-underline-offset:4px; }
+    .site-footer { padding-block:34px 24px; background:#211b19; color:#f3eee8; }
+    .footer-bottom { display:flex; justify-content:space-between; gap:20px; border-top:1px solid #ffffff2a; padding-top:20px; color:#c9beb7; font-size:13px; }
+    .legal-links { display:flex; flex-wrap:wrap; gap:12px 20px; }
+    .legal-links a { color:inherit; text-decoration:none; }
+    .legal-links a:hover { color:white; text-decoration:underline; }
+    :focus-visible { outline:3px solid #d19b77; outline-offset:4px; }
+    @media(max-width:760px) {
+      .wrap { width:min(100% - 36px,1120px); }
+      .nav { min-height:70px; }
+      .brand-name { display:none; }
+      .menu-toggle { display:block; }
+      .nav-links { display:none; position:absolute; z-index:2; top:70px; left:0; right:0; padding:18px; background:var(--wine-dark); flex-direction:column; align-items:stretch; gap:0; }
+      .nav-links.open { display:flex; }
+      .nav-links a { padding:12px 8px; }
+      .stats { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .profile-grid { grid-template-columns:1fr; }
+      .card,.contact { padding:24px; }
+      .footer-bottom { flex-direction:column; }
+    }
+    @media(max-width:380px) { .language-switch select { max-width:106px; } .stat { padding:16px; } }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Pangunahing nabigasyon">
+      <a class="brand" href="/fil/" aria-label="Qubitring – Home"><img class="brand-mark" src="/assets/qubitring-logo.jpg" alt=""><span class="brand-name">Qubitring · Engineering Office</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="/fil/">Home</a><a href="/fil/about.html" aria-current="page">Tagapagtatag</a><a href="/fil/#leistungen">Mga Serbisyo</a><a href="/fil/#referenzen">Mga Sanggunian</a><a href="/fil/#kontakt">Makipag-ugnayan</a>
+      </div>
+      <label class="language-switch"><select id="language-select" aria-label="Wika"><option value="de">Deutsch</option><option value="en">English</option><option value="fil" selected>Filipino</option><option value="zh">中文</option></select></label>
+    </nav>
+  </header>
+  <main class="wrap">
+    <p class="eyebrow">Tagapagtatag · Business Engineer</p>
+    <h1>Martin Kunze</h1>
+    <p class="intro">Tinutulungan ko ang mga negosyo na gawing nasusukat na resulta sa operasyon ang mga layunin nila sa AI at digital transformation. Bilang tagapagtatag ng Qubitring at business engineer, pinag-uugnay ko ang estratehiya para sa customer, teknolohiya, at paghahatid ng proyekto upang makabuo ng mga solusyong gumagana sa pang-araw-araw na operasyon.</p>
+    <div class="stats" aria-label="Piniling karanasan">
+      <div class="stat"><strong>25+</strong><span>taon sa software, retail, pananalapi, kemikal, at pagmamanupaktura</span></div>
+      <div class="stat"><strong>80</strong><span>propesyonal na pinamunuan sa mga pandaigdigang project team</span></div>
+      <div class="stat"><strong>350</strong><span>tao sa pinalawak na deployment organization</span></div>
+      <div class="stat"><strong>€10M</strong><span>ROI mula sa process mining sa 25 bansa</span></div>
+    </div>
+    <h2 class="section-heading">Piniling karanasan</h2>
+    <div class="profile-grid">
+      <article class="card">
+        <h3>Tagapagtatag at Pinuno ng Consulting at Engineering</h3>
+        <p class="role-meta">Qubitring · mula 2021</p>
+        <p>Pinamumunuan ang isang independiyenteng consulting at engineering office at nagdadala ng malinaw na direksiyon at pananagutan sa mga komplikadong programa. Kabilang sa karanasan ang koordinasyon ng mga multidisciplinary project team na may hanggang 200 miyembro, at pagbuo ng mga presales at deployment organization na may hanggang 350 tao sa Europa at Asya.</p>
+      </article>
+      <article class="card">
+        <h3>Vice President, Project Management</h3>
+        <p class="role-meta">GK Software SE · 2023–2026</p>
+        <p>Namuno sa mga pandaigdigang project team na may hanggang 80 propesyonal para sa retail, grocery, electronics, at luxury sectors. Saklaw ng mga programa ang mahigit 3,000 tindahan at 12,000 device, kasama ang mga integrated order, loyalty, at payment system, pati AI-supported pricing at cross-selling.</p>
+      </article>
+      <article class="card">
+        <h3>Value Creation Architect</h3>
+        <p class="role-meta">aye4fin · 2021–2023</p>
+        <p>Nagdisenyo ng mga payment service provider platform para sa Americas, Europa, at Asia-Pacific at nagpayo sa mga multinational organization tungkol sa payment gateway optimization, in-house banking, at pagsunod sa mga patakaran sa internasyonal na pagbabayad.</p>
+      </article>
+      <article class="card">
+        <h3>Pinuno ng Process Excellence at RPA</h3>
+        <p class="role-meta">Linde · 2010–2021</p>
+        <p>Nagtatag ng Process Mining Center of Excellence sa 25 bansa at nakamit ang €10 milyon na ROI sa pamamagitan ng pag-optimize ng proseso. Nagtayo ng mga RPA center sa Munich at Manila at tumulong mag-automate ng mahigit 150 proseso ng negosyo.</p>
+      </article>
+    </div>
+    <section class="card organizations" aria-labelledby="organizations-title">
+      <h2 id="organizations-title" class="section-heading">Karanasan sa iba’t ibang industriya</h2>
+      <p>Kabilang sa mga organisasyon at proyektong binanggit sa kanyang profile ang Samsung, Action, GK Software, Linde Group, KPMG, Bosch, HP, McDonald’s, BMW, Clariant, Süd-Chemie, MAN, HVB, EADS, Hexal, at Novartis.</p>
+    </section>
+    <section class="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Bumuo tayo ng mga resultang nasusukat.</h2>
+      <p>Para sa mga talakayan tungkol sa enterprise AI, digital transformation, kahusayan ng proseso, payments, at delivery scaling:</p>
+      <div class="contact-links"><a href="mailto:mk@qubitring.com">mk@qubitring.com</a><a href="https://www.linkedin.com/in/martinkunze/" target="_blank" rel="noopener noreferrer">LinkedIn profile</a></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="wrap"><div class="footer-bottom">
+    <a href="/fil/">Bumalik sa Home</a>
+    <div class="legal-links"><a href="/fil/impressum.html">Legal na Abiso</a><a href="/fil/datenschutz.html">Patakaran sa Privacy</a></div>
+  </div></div></footer>
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const languageSelect = document.querySelector('#language-select');
+    languageSelect.addEventListener('change', () => {
+      const path = location.pathname.replace(/^\/(de|en|fil|zh)(?=\/|$)/, '') || '/';
+      const prefix = languageSelect.value === 'de' ? '/de' : languageSelect.value === 'en' ? '' : '/' + languageSelect.value;
+      location.href = `${prefix}${path}${location.search}${location.hash}`;
+    });
+    menuButton.addEventListener('click', () => {
+      const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!isOpen));
+      navLinks.classList.toggle('open', !isOpen);
+    });
+    navLinks.addEventListener('click', event => {
+      if (event.target.closest('a')) {
+        menuButton.setAttribute('aria-expanded', 'false');
+        navLinks.classList.remove('open');
+      }
+    });
+  </script>
+</body>
+</html>

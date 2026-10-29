@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="认识 Qubitring 创始人兼商业工程师 Martin Kunze，他拥有超过 25 年的国际转型与项目交付经验。">
+  <title>Martin Kunze – 创始人 | Qubitring</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --wine:#5e1a1a; --wine-dark:#431111; --paper:#f5efe7; --card:#eee7de; --ink:#171513; --muted:#655d55; --line:#d7cec3; --serif:"Merriweather",Georgia,serif; --sans:"Source Sans 3",Arial,sans-serif; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:var(--paper); font-family:var(--sans); }
+    a { color:inherit; }
+    .wrap { width:min(1120px,calc(100% - 48px)); margin-inline:auto; }
+    .site-header { background:var(--wine); color:white; }
+    .nav { min-height:82px; display:flex; align-items:center; justify-content:space-between; gap:30px; }
+    .brand { display:inline-flex; align-items:center; gap:12px; color:white; text-decoration:none; }
+    .brand-mark { display:block; flex:0 0 43px; width:43px; height:43px; border-radius:9px; object-fit:cover; }
+    .brand-name { font-size:13px; letter-spacing:.12em; font-weight:700; text-transform:uppercase; }
+    .nav-links { display:flex; align-items:center; gap:clamp(16px,2.4vw,34px); }
+    .nav-links a { color:#f2e9e5; font-size:14px; text-decoration:none; }
+    .nav-links a:hover { color:white; text-decoration:underline; text-underline-offset:5px; }
+    .menu-toggle { display:none; padding:8px 11px; border:1px solid #ffffff70; border-radius:4px; background:transparent; color:white; font:inherit; }
+    .language-switch { flex:0 0 auto; }
+    .language-switch select { max-width:130px; padding:8px 10px; border:1px solid #ffffff70; border-radius:4px; background:var(--wine-dark); color:white; font:600 13px var(--sans); }
+    main { padding-block:clamp(54px,8vw,96px); }
+    .eyebrow { margin:0 0 16px; color:var(--wine); font-size:14px; font-weight:700; }
+    h1,h2,h3 { font-family:var(--serif); }
+    h1 { max-width:900px; margin:0 0 20px; font-size:clamp(38px,5.4vw,64px); line-height:1.13; letter-spacing:-.04em; }
+    .intro { max-width:860px; margin:0 0 46px; color:var(--muted); font-size:20px; line-height:1.7; }
+    .stats { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:54px; }
+    .stat,.card { border:1px solid var(--line); border-radius:8px; background:var(--card); }
+    .stat { padding:22px; }
+    .stat strong { display:block; color:var(--wine); font:900 clamp(28px,3vw,38px) var(--serif); }
+    .stat span { display:block; margin-top:8px; color:var(--muted); line-height:1.45; }
+    .section-heading { margin:0 0 24px; font-size:clamp(26px,3.2vw,36px); }
+    .profile-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+    .card { padding:28px; }
+    .card h3 { margin:0 0 8px; font-size:21px; line-height:1.35; }
+    .card .role-meta { margin:0 0 16px; color:var(--wine); font-weight:700; }
+    .card p,.card li { color:var(--muted); line-height:1.7; }
+    .card p { margin:0; }
+    .card ul { margin:12px 0 0; padding-left:20px; }
+    .organizations { margin-top:18px; }
+    .organizations p { font-size:17px; }
+    .contact { margin-top:52px; padding:36px; border-radius:8px; background:var(--wine); color:white; }
+    .contact h2 { margin:0 0 12px; font-size:clamp(26px,3.4vw,38px); }
+    .contact p { color:#f2e9e5; line-height:1.65; }
+    .contact-links { display:flex; flex-wrap:wrap; gap:12px 24px; margin-top:22px; }
+    .contact-links a { color:white; font-weight:700; text-underline-offset:4px; }
+    .site-footer { padding-block:34px 24px; background:#211b19; color:#f3eee8; }
+    .footer-bottom { display:flex; justify-content:space-between; gap:20px; border-top:1px solid #ffffff2a; padding-top:20px; color:#c9beb7; font-size:13px; }
+    .legal-links { display:flex; flex-wrap:wrap; gap:12px 20px; }
+    .legal-links a { color:inherit; text-decoration:none; }
+    .legal-links a:hover { color:white; text-decoration:underline; }
+    :focus-visible { outline:3px solid #d19b77; outline-offset:4px; }
+    @media(max-width:760px) {
+      .wrap { width:min(100% - 36px,1120px); }
+      .nav { min-height:70px; }
+      .brand-name { display:none; }
+      .menu-toggle { display:block; }
+      .nav-links { display:none; position:absolute; z-index:2; top:70px; left:0; right:0; padding:18px; background:var(--wine-dark); flex-direction:column; align-items:stretch; gap:0; }
+      .nav-links.open { display:flex; }
+      .nav-links a { padding:12px 8px; }
+      .stats { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .profile-grid { grid-template-columns:1fr; }
+      .card,.contact { padding:24px; }
+      .footer-bottom { flex-direction:column; }
+    }
+    @media(max-width:380px) { .language-switch select { max-width:106px; } .stat { padding:16px; } }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="主导航">
+      <a class="brand" href="/zh/" aria-label="Qubitring – 首页"><img class="brand-mark" src="/assets/qubitring-logo.jpg" alt=""><span class="brand-name">Qubitring · Engineering Office</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">菜单</button>
+      <div class="nav-links" id="nav-links">
+        <a href="/zh/">首页</a><a href="/zh/about.html" aria-current="page">创始人</a><a href="/zh/#leistungen">服务</a><a href="/zh/#referenzen">案例</a><a href="/zh/#kontakt">联系</a>
+      </div>
+      <label class="language-switch"><select id="language-select" aria-label="语言"><option value="de">Deutsch</option><option value="en">English</option><option value="fil">Filipino</option><option value="zh" selected>中文</option></select></label>
+    </nav>
+  </header>
+  <main class="wrap">
+    <p class="eyebrow">创始人 · 商业工程师</p>
+    <h1>Martin Kunze</h1>
+    <p class="intro">我帮助企业将人工智能与数字化转型的目标转化为可衡量的运营成果。作为 Qubitring 创始人和商业工程师，我将客户战略、技术和交付结合起来，打造能够融入日常运营的解决方案。</p>
+    <div class="stats" aria-label="精选经验">
+      <div class="stat"><strong>25+</strong><span>年软件、零售、金融、化工与制造业经验</span></div>
+      <div class="stat"><strong>80</strong><span>曾领导全球项目团队，团队规模达 80 人</span></div>
+      <div class="stat"><strong>350</strong><span>曾扩展交付组织，规模达 350 人</span></div>
+      <div class="stat"><strong>€1,000万</strong><span>流程挖掘在 25 个国家实现的投资回报</span></div>
+    </div>
+    <h2 class="section-heading">精选职业经历</h2>
+    <div class="profile-grid">
+      <article class="card">
+        <h3>创始人兼咨询与工程负责人</h3>
+        <p class="role-meta">Qubitring · 2021 年至今</p>
+        <p>领导独立的咨询与工程办公室，为复杂项目和计划带来清晰结构、执行动力与责任机制。经验包括协调最多 200 人的跨职能项目团队，以及在欧洲和亚洲建设最多 350 人的售前与部署组织。</p>
+      </article>
+      <article class="card">
+        <h3>项目管理副总裁</h3>
+        <p class="role-meta">GK Software SE · 2023–2026</p>
+        <p>领导最多 80 人的全球项目团队，为快时尚、食品零售、电子产品和奢侈品牌交付解决方案。项目覆盖 3,000 多家门店和 12,000 多台设备，整合订单、会员忠诚度与支付系统，并推进人工智能定价和交叉销售应用。</p>
+      </article>
+      <article class="card">
+        <h3>价值创造架构师</h3>
+        <p class="role-meta">aye4fin · 2021–2023</p>
+        <p>设计服务于美洲、欧洲和亚太地区的支付服务提供商平台，并为跨国企业提供支付网关优化、内部银行和国际支付合规战略咨询。</p>
+      </article>
+      <article class="card">
+        <h3>流程卓越与 RPA 负责人</h3>
+        <p class="role-meta">Linde · 2010–2021</p>
+        <p>在 25 个国家建立流程挖掘卓越中心，通过流程优化实现 1,000 万欧元投资回报。在慕尼黑和马尼拉建设 RPA 中心，并推动 150 多项业务流程自动化。</p>
+      </article>
+    </div>
+    <section class="card organizations" aria-labelledby="organizations-title">
+      <h2 id="organizations-title" class="section-heading">跨行业经验</h2>
+      <p>其个人资料提及的合作组织与项目包括 Samsung、Action、GK Software、Linde Group、KPMG、Bosch、HP、McDonald’s、BMW、Clariant、Süd-Chemie、MAN、HVB、EADS、Hexal 和 Novartis。</p>
+    </section>
+    <section class="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">共同创造可衡量的成果。</h2>
+      <p>欢迎交流企业人工智能、数字化转型、流程卓越、支付和交付规模化：</p>
+      <div class="contact-links"><a href="mailto:mk@qubitring.com">mk@qubitring.com</a><a href="https://www.linkedin.com/in/martinkunze/" target="_blank" rel="noopener noreferrer">LinkedIn 个人资料</a></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="wrap"><div class="footer-bottom">
+    <a href="/zh/">返回首页</a>
+    <div class="legal-links"><a href="/zh/impressum.html">法律声明</a><a href="/zh/datenschutz.html">隐私政策</a></div>
+  </div></div></footer>
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const languageSelect = document.querySelector('#language-select');
+    languageSelect.addEventListener('change', () => {
+      const path = location.pathname.replace(/^\/(de|en|fil|zh)(?=\/|$)/, '') || '/';
+      const prefix = languageSelect.value === 'de' ? '/de' : languageSelect.value === 'en' ? '' : '/' + languageSelect.value;
+      location.href = `${prefix}${path}${location.search}${location.hash}`;
+    });
+    menuButton.addEventListener('click', () => {
+      const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!isOpen));
+      navLinks.classList.toggle('open', !isOpen);
+    });
+    navLinks.addEventListener('click', event => {
+      if (event.target.closest('a')) {
+        menuButton.setAttribute('aria-expanded', 'false');
+        navLinks.classList.remove('open');
+      }
+    });
+  </script>
+</body>
+</html>
