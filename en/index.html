@@ -88,9 +88,10 @@
       .nav-links { display: none; position: absolute; z-index: 2; top: 70px; left: 0; right: 0; padding: 18px; background: var(--wine-dark); flex-direction: column; align-items: stretch; gap: 0; }
       .nav-links.open { display: flex; }
       .nav-links a { padding: 12px 8px; }
-      .hero { min-height: unset; grid-template-columns: 1fr; gap: 36px; padding-block: 68px; }
+      .hero { min-height: unset; grid-template-columns: minmax(0, 1fr); gap: 36px; padding-block: 68px; }
       h1 { font-size: clamp(36px, 10vw, 52px); }
-      .hero-art { order: -1; max-width: 560px; }
+      .hero h1 { overflow-wrap: anywhere; hyphens: auto; }
+      .hero-art { order: -1; width: 100%; max-width: 560px; min-width: 0; }
       .metric-grid { grid-template-columns: repeat(2, 1fr); padding-block: 28px; row-gap: 28px; }
       section.content-section { padding-block: 72px; }
       .service-grid, .case-grid { grid-template-columns: 1fr; }
@@ -163,8 +164,8 @@
     const navLinks = document.querySelector('.nav-links');
     const languageSelect = document.querySelector('#language-select');
     languageSelect.addEventListener('change', () => {
-      const path = location.pathname.replace(/^\/(en|fil|zh)(?=\/|$)/, '') || '/';
-      const prefix = languageSelect.value === 'de' ? '' : `/${languageSelect.value}`;
+      const path = location.pathname.replace(/^\/(de|en|fil|zh)(?=\/|$)/, '') || '/';
+      const prefix = languageSelect.value === 'de' ? '/de' : languageSelect.value === 'en' ? '' : '/' + languageSelect.value;
       location.href = `${prefix}${path}${location.search}${location.hash}`;
     });
     menuButton.addEventListener('click', () => {

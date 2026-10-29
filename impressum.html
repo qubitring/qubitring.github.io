@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Impressum des Qubitring.com Engineering Office von Dipl. Ing. Martin Kunze (FH).">
-  <title>Impressum – Qubitring</title>
+  <meta name="description" content="Legal notice for the Qubitring.com Engineering Office of Dipl. Ing. Martin Kunze (FH).">
+  <title>Legal Notice – Qubitring</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -63,20 +63,20 @@
 </head>
 <body>
   <header class="site-header">
-    <nav class="nav wrap" aria-label="Hauptnavigation">
-      <a class="brand" href="/" aria-label="Qubitring – Startseite"><img class="brand-mark" src="/assets/qubitring-logo.jpg" alt=""><span class="brand-name">Qubitring · Engineering Office</span></a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menü</button>
+    <nav class="nav wrap" aria-label="Main navigation">
+      <a class="brand" href="/" aria-label="Qubitring – Home"><img class="brand-mark" src="/assets/qubitring-logo.jpg" alt=""><span class="brand-name">Qubitring · Engineering Office</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
       <div class="nav-links" id="nav-links">
-        <a href="/#leistungen">Leistungen</a><a href="/#referenzen">Über uns</a><a href="/#kontakt">Kontakt</a><a href="/#kontakt">Beratung anfragen</a>
+        <a href="/#leistungen">Services</a><a href="/#referenzen">About</a><a href="/#kontakt">Contact</a><a href="/#kontakt">Request a Consultation</a>
       </div>
-      <label class="language-switch"><select id="language-select" aria-label="Sprache"><option value="de" selected>Deutsch</option><option value="en">English</option><option value="fil">Filipino</option><option value="zh">中文</option></select></label>
+      <label class="language-switch"><select id="language-select" aria-label="Language"><option value="de">Deutsch</option><option value="en" selected>English</option><option value="fil">Filipino</option><option value="zh">中文</option></select></label>
     </nav>
   </header>
   <main class="wrap">
-    <p class="eyebrow">Rechtliche Informationen</p>
-    <h1>Impressum</h1>
+    <p class="eyebrow">Legal Information</p>
+    <h1>Legal Notice</h1>
     <section class="details" aria-labelledby="provider">
-      <h2 id="provider">Angaben gemäß § 5 DDG</h2>
+      <h2 id="provider">Information pursuant to Section 5 DDG</h2>
       <address>
         Dipl. Ing. Martin Kunze (FH)<br>
         Qubitring.com Engineering Office<br>
@@ -88,8 +88,8 @@
   <footer class="site-footer">
     <div class="wrap">
       <div class="footer-bottom">
-        <a href="/">Zurück zur Startseite</a>
-        <div class="legal-links"><a href="/impressum.html" aria-current="page">Impressum</a><a href="/datenschutz.html">Datenschutz</a></div>
+        <a href="/">Back to Home</a>
+        <div class="legal-links"><a href="/impressum.html" aria-current="page">Legal Notice</a><a href="/datenschutz.html">Privacy Policy</a></div>
       </div>
     </div>
   </footer>
@@ -98,8 +98,8 @@
     const navLinks = document.querySelector('.nav-links');
     const languageSelect = document.querySelector('#language-select');
     languageSelect.addEventListener('change', () => {
-      const path = location.pathname.replace(/^\/(en|fil|zh)(?=\/|$)/, '') || '/';
-      const prefix = languageSelect.value === 'de' ? '' : `/${languageSelect.value}`;
+      const path = location.pathname.replace(/^\/(de|en|fil|zh)(?=\/|$)/, '') || '/';
+      const prefix = languageSelect.value === 'de' ? '/de' : languageSelect.value === 'en' ? '' : '/' + languageSelect.value;
       location.href = `${prefix}${path}${location.search}${location.hash}`;
     });
     menuButton.addEventListener('click', () => {

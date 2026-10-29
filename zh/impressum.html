@@ -98,8 +98,8 @@
     const navLinks = document.querySelector('.nav-links');
     const languageSelect = document.querySelector('#language-select');
     languageSelect.addEventListener('change', () => {
-      const path = location.pathname.replace(/^\/(en|fil|zh)(?=\/|$)/, '') || '/';
-      const prefix = languageSelect.value === 'de' ? '' : `/${languageSelect.value}`;
+      const path = location.pathname.replace(/^\/(de|en|fil|zh)(?=\/|$)/, '') || '/';
+      const prefix = languageSelect.value === 'de' ? '/de' : languageSelect.value === 'en' ? '' : '/' + languageSelect.value;
       location.href = `${prefix}${path}${location.search}${location.hash}`;
     });
     menuButton.addEventListener('click', () => {
