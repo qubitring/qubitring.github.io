@@ -29,7 +29,10 @@
     .eyebrow { margin:0 0 16px; color:var(--wine); font-size:14px; font-weight:700; }
     h1,h2,h3 { font-family:var(--serif); }
     h1 { max-width:900px; margin:0 0 20px; font-size:clamp(38px,5.4vw,64px); line-height:1.13; letter-spacing:-.04em; }
-    .intro { max-width:860px; margin:0 0 46px; color:var(--muted); font-size:20px; line-height:1.7; }
+    .founder-hero { display:grid; grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr); gap:clamp(28px,5vw,64px); align-items:center; margin-bottom:54px; }
+    .founder-image { margin:0; }
+    .founder-image img { display:block; width:100%; height:auto; border-radius:8px; }
+    .intro { max-width:860px; margin:0; color:var(--muted); font-size:20px; line-height:1.7; }
     .stats { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:54px; }
     .stat,.card { border:1px solid var(--line); border-radius:8px; background:var(--card); }
     .stat { padding:22px; }
@@ -64,6 +67,7 @@
       .nav-links { display:none; position:absolute; z-index:2; top:70px; left:0; right:0; padding:18px; background:var(--wine-dark); flex-direction:column; align-items:stretch; gap:0; }
       .nav-links.open { display:flex; }
       .nav-links a { padding:12px 8px; }
+      .founder-hero { grid-template-columns:1fr; gap:28px; }
       .stats { grid-template-columns:repeat(2,minmax(0,1fr)); }
       .profile-grid { grid-template-columns:1fr; }
       .card,.contact { padding:24px; }
@@ -85,9 +89,14 @@
     </nav>
   </header>
   <main class="wrap">
-    <p class="eyebrow">Tagapagtatag · Business Engineer</p>
-    <h1>Martin Kunze</h1>
-    <p class="intro">Tinutulungan ko ang mga negosyo na gawing nasusukat na resulta sa operasyon ang mga layunin nila sa AI at digital transformation. Bilang tagapagtatag ng Qubitring at business engineer, pinag-uugnay ko ang estratehiya para sa customer, teknolohiya, at paghahatid ng proyekto upang makabuo ng mga solusyong gumagana sa pang-araw-araw na operasyon.</p>
+    <section class="founder-hero" aria-labelledby="founder-title">
+      <figure class="founder-image"><img src="/assets/martin-kunze-founder.jpeg" alt="Si Martin Kunze, tagapagtatag ng Qubitring" fetchpriority="high"></figure>
+      <div>
+        <p class="eyebrow">Tagapagtatag · Business Engineer</p>
+        <h1 id="founder-title">Martin Kunze</h1>
+        <p class="intro">Tinutulungan ko ang mga negosyo na gawing nasusukat na resulta sa operasyon ang mga layunin nila sa AI at digital transformation. Bilang tagapagtatag ng Qubitring at business engineer, pinag-uugnay ko ang estratehiya para sa customer, teknolohiya, at paghahatid ng proyekto upang makabuo ng mga solusyong gumagana sa pang-araw-araw na operasyon.</p>
+      </div>
+    </section>
     <div class="stats" aria-label="Piniling karanasan">
       <div class="stat"><strong>25+</strong><span>taon sa software, retail, pananalapi, kemikal, at pagmamanupaktura</span></div>
       <div class="stat"><strong>80</strong><span>propesyonal na pinamunuan sa mga pandaigdigang project team</span></div>

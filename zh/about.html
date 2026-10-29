@@ -29,7 +29,10 @@
     .eyebrow { margin:0 0 16px; color:var(--wine); font-size:14px; font-weight:700; }
     h1,h2,h3 { font-family:var(--serif); }
     h1 { max-width:900px; margin:0 0 20px; font-size:clamp(38px,5.4vw,64px); line-height:1.13; letter-spacing:-.04em; }
-    .intro { max-width:860px; margin:0 0 46px; color:var(--muted); font-size:20px; line-height:1.7; }
+    .founder-hero { display:grid; grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr); gap:clamp(28px,5vw,64px); align-items:center; margin-bottom:54px; }
+    .founder-image { margin:0; }
+    .founder-image img { display:block; width:100%; height:auto; border-radius:8px; }
+    .intro { max-width:860px; margin:0; color:var(--muted); font-size:20px; line-height:1.7; }
     .stats { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:54px; }
     .stat,.card { border:1px solid var(--line); border-radius:8px; background:var(--card); }
     .stat { padding:22px; }
@@ -64,6 +67,7 @@
       .nav-links { display:none; position:absolute; z-index:2; top:70px; left:0; right:0; padding:18px; background:var(--wine-dark); flex-direction:column; align-items:stretch; gap:0; }
       .nav-links.open { display:flex; }
       .nav-links a { padding:12px 8px; }
+      .founder-hero { grid-template-columns:1fr; gap:28px; }
       .stats { grid-template-columns:repeat(2,minmax(0,1fr)); }
       .profile-grid { grid-template-columns:1fr; }
       .card,.contact { padding:24px; }
@@ -85,9 +89,14 @@
     </nav>
   </header>
   <main class="wrap">
-    <p class="eyebrow">创始人 · 商业工程师</p>
-    <h1>Martin Kunze</h1>
-    <p class="intro">我帮助企业将人工智能与数字化转型的目标转化为可衡量的运营成果。作为 Qubitring 创始人和商业工程师，我将客户战略、技术和交付结合起来，打造能够融入日常运营的解决方案。</p>
+    <section class="founder-hero" aria-labelledby="founder-title">
+      <figure class="founder-image"><img src="/assets/martin-kunze-founder.jpeg" alt="Qubitring 创始人 Martin Kunze" fetchpriority="high"></figure>
+      <div>
+        <p class="eyebrow">创始人 · 商业工程师</p>
+        <h1 id="founder-title">Martin Kunze</h1>
+        <p class="intro">我帮助企业将人工智能与数字化转型的目标转化为可衡量的运营成果。作为 Qubitring 创始人和商业工程师，我将客户战略、技术和交付结合起来，打造能够融入日常运营的解决方案。</p>
+      </div>
+    </section>
     <div class="stats" aria-label="精选经验">
       <div class="stat"><strong>25+</strong><span>年软件、零售、金融、化工与制造业经验</span></div>
       <div class="stat"><strong>80</strong><span>曾领导全球项目团队，团队规模达 80 人</span></div>
