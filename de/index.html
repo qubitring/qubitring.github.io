@@ -65,6 +65,9 @@
     .cases { background: #eee7de; }
     .case-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
     .case-card { padding: 28px 30px; min-height: 178px; border: 1px solid #ded4c9; border-radius: 7px; background: var(--paper); }
+    .case-logo { display: flex; align-items: center; justify-content: center; height: 82px; margin: -8px 0 20px; padding: 10px 14px; border-radius: 4px; background: white; }
+    .case-logo img { display: block; max-width: 100%; max-height: 62px; object-fit: contain; }
+    .case-logo.dark { background: #080808; }
     .case-card .client { margin: 0 0 12px; color: var(--wine); font-size: 12px; letter-spacing: .09em; font-weight: 700; }
     .contact-band { padding-block: 90px; text-align: center; }
     .contact-band h2 { margin: 0 0 14px; font-size: clamp(34px, 4vw, 48px); }
@@ -143,10 +146,10 @@
     <section class="content-section cases" id="referenzen" aria-labelledby="cases-title"><div class="wrap">
       <div class="section-heading"><p class="eyebrow">Ausgewählte Referenzen</p><h2 id="cases-title">Ergebnisse, die zählen.</h2></div>
       <div class="case-grid">
-        <article class="case-card"><p class="client">LINDE PLC</p><h3>Process Excellence CoE</h3><p>Globales Process Mining CoE in 25 Ländern aufgebaut – mit über €10 Mio. ROI.</p></article>
-        <article class="case-card"><p class="client">GK SOFTWARE</p><h3>Retail Platform Rollout</h3><p>Globale Implementierung in 3.000+ Filialen und 12.000+ Geräten mit integrierten Payment- und KI-Lösungen.</p></article>
-        <article class="case-card"><p class="client">AYE4FIN</p><h3>Payment Platform Architecture</h3><p>Multi-regionale PSP-Plattformen für Europa, Amerika und Asien-Pazifik konzipiert und umgesetzt.</p></article>
-        <article class="case-card"><p class="client">KPMG / CORPORATE</p><h3>M&amp;A Integration</h3><p>Pre- und Post-Merger-Integration für milliardenschwere Transaktionen geleitet.</p></article>
+        <article class="case-card"><div class="case-logo"><img src="/assets/references/linde.jpg" alt=""></div><p class="client">LINDE PLC</p><h3>Process Excellence CoE</h3><p>Globales Process Mining CoE in 25 Ländern aufgebaut – mit über €10 Mio. ROI.</p></article>
+        <article class="case-card"><div class="case-logo dark"><img src="/assets/references/gk-software.png" alt=""></div><p class="client">GK SOFTWARE</p><h3>Retail Platform Rollout</h3><p>Globale Implementierung in 3.000+ Filialen und 12.000+ Geräten mit integrierten Payment- und KI-Lösungen.</p></article>
+        <article class="case-card"><div class="case-logo"><img src="/assets/references/aye4fin.jpg" alt=""></div><p class="client">AYE4FIN</p><h3>Payment Platform Architecture</h3><p>Multi-regionale PSP-Plattformen für Europa, Amerika und Asien-Pazifik konzipiert und umgesetzt.</p></article>
+        <article class="case-card"><div class="case-logo"><img src="/assets/references/kpmg.jpg" alt=""></div><p class="client">KPMG / CORPORATE</p><h3>M&amp;A Integration</h3><p>Pre- und Post-Merger-Integration für milliardenschwere Transaktionen geleitet.</p></article>
       </div>
     </div></section>
     <section class="contact-band wrap" id="kontakt"><p class="eyebrow">Gemeinsam weiterdenken</p><h2>Lassen Sie uns sprechen.</h2><p>Schildern Sie Ihre Herausforderung – ich melde mich innerhalb von 24 Stunden.</p><a class="button primary" href="mailto:mk@qubitring.com">Jetzt Kontakt aufnehmen</a></section>

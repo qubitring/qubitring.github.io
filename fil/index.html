@@ -65,6 +65,9 @@
     .cases { background: #eee7de; }
     .case-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
     .case-card { padding: 28px 30px; min-height: 178px; border: 1px solid #ded4c9; border-radius: 7px; background: var(--paper); }
+    .case-logo { display: flex; align-items: center; justify-content: center; height: 82px; margin: -8px 0 20px; padding: 10px 14px; border-radius: 4px; background: white; }
+    .case-logo img { display: block; max-width: 100%; max-height: 62px; object-fit: contain; }
+    .case-logo.dark { background: #080808; }
     .case-card .client { margin: 0 0 12px; color: var(--wine); font-size: 12px; letter-spacing: .09em; font-weight: 700; }
     .contact-band { padding-block: 90px; text-align: center; }
     .contact-band h2 { margin: 0 0 14px; font-size: clamp(34px, 4vw, 48px); }
@@ -142,10 +145,10 @@
     <section class="content-section cases" id="referenzen" aria-labelledby="cases-title"><div class="wrap">
       <div class="section-heading"><p class="eyebrow">Mga Piling Kaso ng Kliyente</p><h2 id="cases-title">Mga Resultang Mahalaga.</h2></div>
       <div class="case-grid">
-        <article class="case-card"><p class="client">LINDE PLC</p><h3>CoE para sa Kahusayan ng Proseso</h3><p>Nagtatag ng pandaigdigang Process Mining CoE sa 25 bansa, na may mahigit €10 milyon na ROI.</p></article>
-        <article class="case-card"><p class="client">GK SOFTWARE</p><h3>Paglulunsad ng Retail Platform</h3><p>Pandaigdigang pagpapatupad sa mahigit 3,000 tindahan at 12,000 device, gamit ang pinagsamang payment at AI solution.</p></article>
-        <article class="case-card"><p class="client">AYE4FIN</p><h3>Arkitektura ng Payment Platform</h3><p>Nagdisenyo at nagpatupad ng mga multi-region na PSP platform para sa Europa, Amerika, at Asia-Pacific.</p></article>
-        <article class="case-card"><p class="client">KPMG / CORPORATE</p><h3>Integrasyon ng M&amp;A</h3><p>Pinamunuan ang integrasyon bago at pagkatapos ng merger para sa mga transaksiyong nagkakahalaga ng bilyun-bilyon.</p></article>
+        <article class="case-card"><div class="case-logo"><img src="/assets/references/linde.jpg" alt=""></div><p class="client">LINDE PLC</p><h3>CoE para sa Kahusayan ng Proseso</h3><p>Nagtatag ng pandaigdigang Process Mining CoE sa 25 bansa, na may mahigit €10 milyon na ROI.</p></article>
+        <article class="case-card"><div class="case-logo dark"><img src="/assets/references/gk-software.png" alt=""></div><p class="client">GK SOFTWARE</p><h3>Paglulunsad ng Retail Platform</h3><p>Pandaigdigang pagpapatupad sa mahigit 3,000 tindahan at 12,000 device, gamit ang pinagsamang payment at AI solution.</p></article>
+        <article class="case-card"><div class="case-logo"><img src="/assets/references/aye4fin.jpg" alt=""></div><p class="client">AYE4FIN</p><h3>Arkitektura ng Payment Platform</h3><p>Nagdisenyo at nagpatupad ng mga multi-region na PSP platform para sa Europa, Amerika, at Asia-Pacific.</p></article>
+        <article class="case-card"><div class="case-logo"><img src="/assets/references/kpmg.jpg" alt=""></div><p class="client">KPMG / CORPORATE</p><h3>Integrasyon ng M&amp;A</h3><p>Pinamunuan ang integrasyon bago at pagkatapos ng merger para sa mga transaksiyong nagkakahalaga ng bilyun-bilyon.</p></article>
       </div>
     </div></section>
     <section class="contact-band wrap" id="kontakt"><p class="eyebrow">Sama-Samang Mag-isip Pasulong</p><h2>Mag-usap Tayo.</h2><p>Ikuwento ang iyong hamon—makikipag-ugnayan ako sa iyo sa loob ng 24 oras.</p><a class="button primary" href="mailto:mk@qubitring.com">Makipag-ugnayan Ngayon</a></section>
